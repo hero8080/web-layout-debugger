@@ -10,7 +10,7 @@
 
 ##在vite中使用
 
-####修改 `min.js`文件
+####修改 min.js 文件
 ```js
 import { createApp } from 'vue'
 //vue
