@@ -2,8 +2,8 @@ Language : 🇺🇸 | [🇨🇳](./README.zh-CN.md)
 # web-layout-debugger
 Using the ` web-layout-debugger` plug-in, you can visually see the web page layout, whether there are layout bugs, whether the layout is standardized, whether the margin and padding spacing are standardized, whether the text alignment is standardized, and whether the button hot zone size is standardized. It can be used in various frameworks such as `Vue` and `react` and `electron`
 ## web-layout-debugger
-![npm](https://raw.githubusercontent.com/hero8080/web_layout_debugger/main/npm.png)
-![git](https://raw.githubusercontent.com/hero8080/web_layout_debugger/main/git.png)
+![npm](https://raw.githubusercontent.com/hero8080/web-layout-debugger/main/npm.png)
+![git](https://raw.githubusercontent.com/hero8080/web-layout-debugger/main/git.png)
 
 ## Install
 `npm i web-layout-debugger --save`
