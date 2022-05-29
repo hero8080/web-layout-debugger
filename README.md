@@ -5,12 +5,12 @@ Using the ` web-layout-debugger` plug-in, you can visually see the web page layo
 ![npm](https://raw.githubusercontent.com/hero8080/web_layout_debugger/main/npm.png)
 ![git](https://raw.githubusercontent.com/hero8080/web_layout_debugger/main/git.png)
 
-##Install
+## Install
 `npm i web-layout-debugger --save`
 
-##Use in vite
+## Use in vite
 
-####Edit `min.js`file
+#### Edit `min.js`file
 ```js
 import { createApp } from 'vue'
 //vue
@@ -27,9 +27,9 @@ if(import.meta.env.DEV){
 createApp(App).mount('#app');
 ```
 
-##Use in webpack
+## Use in webpack
 
-####Edit `min.js`file
+#### Edit `min.js`file
 ```js
 import Vue from 'vue'
 import App from './App'
@@ -45,9 +45,9 @@ new Vue({
   render: (h) => h(App)
 }).$mount('#app')
 ```
-##Use in react
+## Use in react
 
-####Edit `index.js`file
+#### Edit `index.js`file
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
