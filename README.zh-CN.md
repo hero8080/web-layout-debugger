@@ -9,6 +9,7 @@
 `npm i web-layout-debugger --save`
 
 #在vite中使用
+
 ###修改 `min.js`文件
 ```js
 import { createApp } from 'vue'
@@ -27,6 +28,7 @@ createApp(App).mount('#app');
 ```
 
 #在webpack中使用
+
 ###修改 `min.js`文件
 ```js
 import Vue from 'vue'
@@ -44,6 +46,7 @@ new Vue({
 }).$mount('#app')
 ```
 #在react中使用
+
 ###修改 `index.js`文件
 ```js
 import React from 'react';

@@ -9,6 +9,7 @@ Using the ` web-layout-debugger` plug-in, you can visually see the web page layo
 `npm i web-layout-debugger --save`
 
 #Use in vite
+
 ###Edit `min.js`file
 ```js
 import { createApp } from 'vue'
@@ -27,6 +28,7 @@ createApp(App).mount('#app');
 ```
 
 #Use in webpack
+
 ###Edit `min.js`file
 ```js
 import Vue from 'vue'
@@ -44,6 +46,7 @@ new Vue({
 }).$mount('#app')
 ```
 #Use in react
+
 ###Edit `index.js`file
 ```js
 import React from 'react';
