@@ -1,0 +1,23 @@
+{
+  "name": "web-layout-debugger",
+  "version": "1.0.0",
+  "description": "web-layout-debugger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hero8080/web_layout_debugger.git"
+  },
+  "keywords": [
+    "layout",
+    "debugger"
+  ],
+  "author": "zhouxiansheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hero8080/web_layout_debugger/issues"
+  },
+  "homepage": "https://github.com/hero8080/web_layout_debugger#readme"
+}
