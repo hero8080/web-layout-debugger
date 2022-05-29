@@ -36,7 +36,7 @@ export const loadLayoutDebugger=once(function (){
 
 
     //只执行一次
-    console.log('只执行一次')
+
     //创建一个debugger按钮
     let htmlDivElement = document.createElement('div');
     //给按钮添加样式
@@ -45,7 +45,6 @@ export const loadLayoutDebugger=once(function (){
     let layoutDebuggerPosition=localStorage.getItem('layout_debugger')
     if(layoutDebuggerPosition){
         layoutDebuggerPosition=JSON.parse(layoutDebuggerPosition)
-        console.log(layoutDebuggerPosition)
         htmlDivElement.style.left=layoutDebuggerPosition.left
         htmlDivElement.style.top=layoutDebuggerPosition.top
     }
@@ -58,7 +57,6 @@ export const loadLayoutDebugger=once(function (){
             isMoving=false
             return
         }
-        console.log('onclick')
         //响应样式变化
         //开启状态，执行关闭
         let cssText = '*{box-shadow: 0 0 0 1px red;}'
@@ -79,7 +77,6 @@ export const loadLayoutDebugger=once(function (){
     }
     document.body.appendChild(htmlDivElement)
     htmlDivElement.onmousedown=function (event){
-        console.log('onmousedown')
         var ev = ev || event;
         var disX = ev.clientX - this.offsetLeft;
         var disY = ev.clientY - this.offsetTop;
@@ -88,7 +85,6 @@ export const loadLayoutDebugger=once(function (){
         }
 
         document.onmousemove = function(ev) {
-            console.log('onmousemove')
             var ev = ev || event;
 
             var L = ev.clientX - disX;
@@ -120,7 +116,6 @@ export const loadLayoutDebugger=once(function (){
             if ( htmlDivElement.releaseCapture ) {
                 htmlDivElement.releaseCapture();
             }
-            console.log('onmouseup')
 
             //存储位置
             localStorage.setItem('layout_debugger',JSON.stringify({left:htmlDivElement.style.left,top:htmlDivElement.style.top}))
@@ -135,7 +130,6 @@ export const loadLayoutDebugger=once(function (){
             left:0,
         }
         let layoutDebuggerPosition=localStorage.getItem('layout_debugger')
-        console.log(layoutDebuggerPosition)
         if(layoutDebuggerPosition){
             layoutDebuggerPosition=JSON.parse(layoutDebuggerPosition)
             position={
@@ -143,7 +137,6 @@ export const loadLayoutDebugger=once(function (){
                 left:parseInt(layoutDebuggerPosition.left),
             }
         }
-        console.log(position)
         if(position.top>0&&position.left>0){
             if(innerHeight<position.top||innerWidth<position.left){
                 htmlDivElement.style.left='initial'
@@ -152,17 +145,15 @@ export const loadLayoutDebugger=once(function (){
             }
         }
     }
+
+    console.log('layoutDebugger has loaded.')
 })
 export function once(fn){
     let caller=true
     return function (){
-        console.log('有来访者')
         if(caller){
-            console.log('我已经关门了，下次别来了')
             caller=false
             fn.apply(this,arguments)
-        }else{
-            console.log('没人理你')
         }
     }
 }
