@@ -6,7 +6,7 @@
 ![git](https://raw.githubusercontent.com/hero8080/web_layout_debugger/main/git.png)
 
 ##安装
-`npm i web-layout-debugger --save`
+npm i web-layout-debugger --save
 
 ##在vite中使用
 
