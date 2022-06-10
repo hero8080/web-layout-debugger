@@ -51,10 +51,10 @@ export const loadLayoutDebugger=once(function (){
     htmlDivElement.setAttribute('status','close')
     htmlDivElement.innerHTML='<div></div>'
     //给按钮添加事件
-    let isMoving=false
+    let firstTime = 0;
     htmlDivElement.onclick=function (){
-        if(isMoving){
-            isMoving=false
+        let lastTime = new Date().getTime();
+        if((lastTime - firstTime) > 200){
             return
         }
         //响应样式变化
@@ -77,6 +77,8 @@ export const loadLayoutDebugger=once(function (){
     }
     document.body.appendChild(htmlDivElement)
     htmlDivElement.onmousedown=function (event){
+        firstTime = new Date().getTime();
+
         var ev = ev || event;
         var disX = ev.clientX - this.offsetLeft;
         var disY = ev.clientY - this.offsetTop;
@@ -105,10 +107,6 @@ export const loadLayoutDebugger=once(function (){
             htmlDivElement.style.left = L + 'px';
             htmlDivElement.style.top = T + 'px';
 
-
-            if(!isMoving){
-                isMoving=true
-            }
         }
 
         document.onmouseup = function() {
